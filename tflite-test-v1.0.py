@@ -52,7 +52,7 @@ for file in files_list:
   # print(file, _dataset_prediction)
   prediction_outcome = (prediction == _dataset_prediction)
   predictions.append(prediction_outcome)
-  print('TFLite tensor:', prediction_tensor, '- prediction label:', prediction_label, '- prediction:', prediction, '- isTrue?', prediction_outcome)
+  print('Filename:', file, '- TFLite tensor:', prediction_tensor, '- prediction label:', prediction_label, '- prediction:', prediction, '- isTrue?', prediction_outcome)
 
 # calculate model evaluation metrics
 predictions = np.array(predictions)
