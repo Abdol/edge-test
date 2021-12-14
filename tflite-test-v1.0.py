@@ -7,6 +7,7 @@ import pandas as pd
 import cv2
 
 # definitions
+foldername = 'dataset_edge_test'
 filename = 'dataset_edge_test.csv'
 files_list = []
 labels = ['daisy', 'dandelion', 'roses', 'sunflowers', 'tulips']
@@ -14,10 +15,8 @@ predictions = []
 
 # import data
 edge_dataset = pd.read_csv(filename, header=0)
+files_list = edge_dataset['image_name'].values
 print(edge_dataset.head())
-sample = edge_dataset.loc[edge_dataset['image_name'] == '8475769_3dea463364_m.jpg'].label_no[0]
-sample_alt = edge_dataset.loc[edge_dataset['image_name'] == '8475769_3dea463364_m.jpg']['label_no'][0]
-print(sample_alt)
 
 # prepare tflite model
 tflite_model_path = 'model.tflite'
@@ -35,7 +34,7 @@ print('width:', width, 'height', height)
 
 # execute model (i.e. infer) on data files
 for file in files_list:
-  image_path = file # 'dandelion.jpg' # 'rose.jpg' # 'sunflower.jpg' # 'daisy.jpg' # 'daisy.jpg'
+  image_path = foldername + '/' + file # 'dandelion.jpg' # 'rose.jpg' # 'sunflower.jpg' # 'daisy.jpg' # 'daisy.jpg'
   image = cv2.imread(image_path)
   image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
   imH, imW, _ = image.shape 
