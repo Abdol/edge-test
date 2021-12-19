@@ -24,7 +24,7 @@ print(edge_dataset.head())
 
 # prepare tflite model
 tflite_model_eval2_time_start = time.clock()
-tflite_model_path = 'model.tflite'
+tflite_model_path = 'epochs50-model.tflite'
 interpreter = tflite.Interpreter(model_path=tflite_model_path)
 interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
