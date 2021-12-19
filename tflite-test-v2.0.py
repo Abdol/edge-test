@@ -75,7 +75,7 @@ No. of CPU cores: {multiprocessing.cpu_count()}
 print(stats)
 
 # csv file header: ['timestamp', 'tflite_eval_time_elapsed', 'accuracy'])
-stats_list = [timestamp, tflite_model_eval2_time_elapsed, tflite_accuracy['accuracy']]
+stats_list = [timestamp, tflite_model_eval2_time_elapsed, tflite_accuracy]
 with open('stats_odroid' + '.csv', "a") as csv_output_file:
     writer = csv.writer(csv_output_file)
     writer.writerow(stats_list)
