@@ -93,6 +93,6 @@ print(stats)
 
 # tflite csv file header: ['timestamp', 'tflite_eval_time_elapsed', 'tflite_model_eval2_time_elapsed', 'tflite_precision', 'tflite_recall', 'tflite_f1', 'tflite_accuracy'])
 stats_list = [timestamp, tflite_model_eval_time_elapsed, tflite_precision, tflite_recall, tflite_f1, tflite_accuracy]
-with open('../stats_odroid.csv', "a") as csv_output_file:
+with open('odroid-stats.csv', "a") as csv_output_file:
     writer = csv.writer(csv_output_file)
     writer.writerow(stats_list)
