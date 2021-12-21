@@ -1,0 +1,18 @@
+Run stats (in sec) - 2021-12-20 23:28:01.039192
+--------------------------TF---------------------------
+training_time_elapsed: 4791.991237
+eval_time_elapsed: 28.997491000000082 - accuracy: 0.918367326259613
+model_export_time_elapsed: 100.48923400000058
+---------------------------TFLite-----------------------
+tflite_eval_time_elapsed (using model maker): 191.71576534700034 - accuracy: {'accuracy': 0.9183673469387755}
+tflite_model_eval2_time_elapsed (using interpreter): 194.40525100000013 - accuracy: 0.9079754601226994
+-------------------------------------------------------
+No. of CPU cores: 2
+Hardware: [name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 1188739110297720429
+xla_global_id: -1
+]

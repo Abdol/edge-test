@@ -1,0 +1,29 @@
+Run stats (in sec) - 2021-12-20 02:54:44.416814
+--------------------------TF---------------------------
+training_time_elapsed: 2073.2105159999996
+eval_time_elapsed: 18.411407000000054 - accuracy: 0.884353756904602
+model_export_time_elapsed: 95.60847400000011
+---------------------------TFLite-----------------------
+tflite_eval_time_elapsed (using model maker): 189.81930029600016 - accuracy: {'accuracy': 0.8775510204081632}
+tflite_model_eval2_time_elapsed (using interpreter): 191.29937700000028 - accuracy: 0.9202453987730062
+-------------------------------------------------------
+No. of CPU cores: 2
+Hardware: [name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 16978443985591403454
+xla_global_id: -1
+, name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 11320098816
+locality {
+  bus_id: 1
+  links {
+  }
+}
+incarnation: 9978700303621240663
+physical_device_desc: "device: 0, name: Tesla K80, pci bus id: 0000:00:04.0, compute capability: 3.7"
+xla_global_id: 416903419
+]
