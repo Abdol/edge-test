@@ -1,10 +1,10 @@
 print('TFLite LSTM Energy Classivation V2.1')
 
 # imports
+import cv2
 import tensorflow.lite as tflite
 import numpy as np
 import pandas as pd
-import cv2
 import time
 from datetime import datetime
 import csv
